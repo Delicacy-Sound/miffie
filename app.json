@@ -1,0 +1,51 @@
+{
+  "name": "Miffie",
+  "description": "Very simple discord music bot with the discord.js with Song Name playing. It can able to play music with the song name",
+  "repository": "https://github.com/delicacysound/miffie",
+  "logo": "https://media.discordapp.net/attachments/899004161687973998/899037716111573062/PicsArt_10-16-02.54.09.png",
+  "keywords": [
+    "node",
+    "discord",
+    "youtube",
+    "music",
+    "bot",
+    "lavalink",
+    "dashboard"
+  ],
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "Prefix": {
+      "description": "Miffie Prefix",
+      "required": "true"
+    },
+    "Token": {
+      "description": "Miffie Token (https://discord.com/developers/applications)",
+      "required": "true"
+    },
+    "Discord_ClientID": {
+      "description": "Miffie ClientID",
+      "required": "true"
+    },
+    "Discord_ClientSecret": {
+      "description": "Miffie ClientSecret",
+      "required": "true"
+    },
+    "Website": {
+      "description": "My site",
+      "value": "https://miffie.delicacysound.repl.co"
+    },
+    "Spotify_ClientID": {
+      "description": "Spotify ClientID. This is used if you want to use Spotify features for your bot. (https://developer.spotify.com/dashboard/)",
+      "required": "true"
+    },
+    "Spotify_ClientSecret": {
+      "description": "Spotify ClientSecret. This is used if you want to use Spotify features for your bot. (https://developer.spotify.com/dashboard/)",
+      "required": "true"
+    }
+  }
+}
