@@ -11,13 +11,7 @@ module.exports = {
     member: [],
   },
   aliases: ["p"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     if (!message.member.voice.channel)
       return client.sendTime(
@@ -211,18 +205,12 @@ module.exports = {
         description: "Play music in the voice channel",
       },
     ],
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
+
     run: async (client, interaction, args, { GuildDB }) => {
       const guild = client.guilds.cache.get(interaction.guild_id);
       const member = guild.members.cache.get(interaction.member.user.id);
       const voiceChannel = member.voice.channel;
-      let awaitchannel = client.channels.cache.get(interaction.channel_id); /// thanks Reyansh for this idea ;-;
+      let awaitchannel = client.channels.cache.get(interaction.channel_id); 
       if (!member.voice.channel)
         return client.sendTime(
           interaction,

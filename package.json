@@ -1,6 +1,6 @@
 {
   "name": "miffie",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Very simple discord music bot with the discord.js with Song Name playing. It can able to play music with the song name",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/natafuk/postrussiaradio.git"
+    "url": "git+https://github.com/Delicacy-Sound/miffie.git"
   },
   "engines": {
     "node": "14.x"
@@ -27,9 +27,9 @@
   "author": "NateAles",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/natafuk/postrussiaradio/issues"
+    "url": "https://github.com/Delicacy-Sound/miffie/issues"
   },
-  "homepage": "https://github.com/natafuk/postrussiaradio#readme",
+  "homepage": "https://github.com/Delicacy-Sound/miffie#readme",
   "dependencies": {
     "colors": "^1.4.0",
     "cpu-stat": "^2.0.1",

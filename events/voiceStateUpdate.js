@@ -1,12 +1,6 @@
 const { DiscordMusicBot } = require("../structures/DiscordMusicBot");
 const { VoiceState, MessageEmbed } = require("discord.js");
-/**
- *
- * @param {DiscordMusicBot} client
- * @param {VoiceState} oldState
- * @param {VoiceState} newState
- * @returns {Promise<void>}
- */
+
 module.exports = async (client, oldState, newState) => {
   // get guild and player
   let guildId = newState.guild.id;

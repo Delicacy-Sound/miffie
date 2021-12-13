@@ -10,13 +10,7 @@ module.exports = {
     member: [],
   },
   aliases: ["np", "nowplaying", "now playing"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     let player = await client.Manager.get(message.guild.id);
     if (!player)
@@ -27,7 +21,7 @@ module.exports = {
 
     let song = player.queue.current;
     let QueueEmbed = new MessageEmbed()
-      .setAuthor("Currently playing", client.botconfig.IconURL)
+      .setAuthor("❄ Currently playing ❄", client.botconfig.IconURL)
       .setColor(client.botconfig.EmbedColor)
       .setDescription(`[${song.title}](${song.uri})`)
       .addField("Requested by", `${song.requester}`, true)
@@ -47,13 +41,7 @@ module.exports = {
   },
 
   SlashCommand: {
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
+
     run: async (client, interaction, args, { GuildDB }) => {
       let player = await client.Manager.get(interaction.guild_id);
       if (!player.queue.current)
@@ -64,7 +52,7 @@ module.exports = {
 
       let song = player.queue.current;
       let QueueEmbed = new MessageEmbed()
-        .setAuthor("Currently playing", client.botconfig.IconURL)
+        .setAuthor("❄ Currently playing ❄", client.botconfig.IconURL)
         .setColor(client.botconfig.EmbedColor)
         .setDescription(`[${song.title}](${song.uri})`)
         .addField("Requested by", `${song.requester}`, true)

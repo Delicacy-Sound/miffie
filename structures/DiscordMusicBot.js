@@ -14,6 +14,7 @@ const prettyMilliseconds = require("pretty-ms");
 require("discordjs-activity"); //Epic Package, For more details: https://www.npmjs.com/package/discordjs-activity
 require("./EpicPlayer"); //idk why im doing but i wanna learn something new so...
 
+
 class DiscordMusicBot extends Client {
   constructor(props) {
     super(props);
@@ -155,7 +156,7 @@ class DiscordMusicBot extends Client {
       .on("trackStart", async (player, track) => {
         this.SongsPlayed++;
         let TrackStartedEmbed = new MessageEmbed()
-          .setAuthor(`Now playing ♪`, this.botconfig.IconURL)
+          .setAuthor(`Now playing ❄️`, this.botconfig.IconURL)
           .setThumbnail(player.queue.current.displayThumbnail())
           .setDescription(`[${track.title}](${track.uri})`)
           .addField("Requested by", `${track.requester}`, true)

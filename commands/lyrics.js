@@ -12,13 +12,7 @@ module.exports = {
     member: [],
   },
   aliases: ["ly"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     let player = await client.Manager.get(message.guild.id);
     let SongTitle = args.join(" ");
@@ -70,13 +64,6 @@ module.exports = {
         required: false,
       },
     ],
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
 
     run: async (client, interaction, args, { GuildDB }) => {
       let player = await client.Manager.get(interaction.guild_id);

@@ -60,7 +60,7 @@ module.exports = {
           }
 
           description =
-            `Total Servers - ${bot.guilds.cache.size}\n\n` +
+            `❄ Total Servers: ${bot.guilds.cache.size}\n\n` +
             bot.guilds.cache
               .sort((a, b) => b.memberCount - a.memberCount)
               .map(r => r)

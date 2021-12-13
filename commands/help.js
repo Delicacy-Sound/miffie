@@ -9,13 +9,7 @@ module.exports = {
     member: [],
   },
   aliases: ["command", "commands", "cmd"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     let Commands = client.commands.map(
       (cmd) =>
@@ -26,20 +20,20 @@ module.exports = {
 
     let Embed = new MessageEmbed()
       .setAuthor(
-        `Commands of ${client.user.username}`,
+        `❄ Commands of ${client.user.username} ❄`,
         client.botconfig.IconURL
       )
       .setColor(client.botconfig.EmbedColor)
       .setFooter(
         `To get info of each command type ${
           GuildDB ? GuildDB.prefix : client.botconfig.DefaultPrefix
-        }help [Command] | Have a nice day!`
+        }help [Command] | Marry Christmas!`
       ).setDescription(`${Commands.join("\n")}
   
   Miffie Version: v${require("../package.json").version}
-  [✨ Support Server](${
+  [Support Server](${
     client.botconfig.SupportServer
-  }) | [VK Page](https://vk.com/delicacysound)`);
+  }) • [VK Page](https://vk.com/delicacysound) • [Website](https://miffie.delicacysound.repl.co/) • [Monitoring](https://monitoring.delicacysound.repl.co/)`);
     if (!args[0]) message.channel.send(Embed);
     else {
       let cmd =
@@ -48,7 +42,7 @@ module.exports = {
       if (!cmd)
         return client.sendTime(
           message.channel,
-          `❌ | Unable to find that command.`
+          `❌ | Unable to access this command due to *Unkown command*.`
         );
 
       let embed = new MessageEmbed()
@@ -92,13 +86,6 @@ module.exports = {
         required: false,
       },
     ],
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
 
     run: async (client, interaction, args, { GuildDB }) => {
       let Commands = client.commands.map(
@@ -110,20 +97,20 @@ module.exports = {
 
       let Embed = new MessageEmbed()
         .setAuthor(
-          `Commands of ${client.user.username}`,
+          `❄ Commands of ${client.user.username} ❄`,
           client.botconfig.IconURL
         )
         .setColor(client.botconfig.EmbedColor)
         .setFooter(
           `To get info of each command type ${
             GuildDB ? GuildDB.prefix : client.botconfig.DefaultPrefix
-          }help [Command] | Have a nice day!`
+          }help [Command] | Marry Christmas!`
         ).setDescription(`${Commands.join("\n")}
   
   Miffie Version: v${require("../package.json").version}
-  [✨ Support Server](${
+  [Support Server](${
     client.botconfig.SupportServer
-  }) | [VK Page](https://vk.com/delicacysound)`);
+  }) • [VK Page](https://vk.com/delicacysound) • [Website](https://miffie.delicacysound.repl.co/) • [Monitoring](https://monitoring.delicacysound.repl.co/)`);
       if (!args) return interaction.send(Embed);
       else {
         let cmd =
@@ -134,14 +121,14 @@ module.exports = {
         if (!cmd)
           return client.sendTime(
             interaction,
-            `❌ | Unable to find that command.`
+            `❌ | Unable to access this command due to *Unkown command*.`
           );
 
         let embed = new MessageEmbed()
           .setAuthor(`Command: ${cmd.name}`, client.botconfig.IconURL)
           .setDescription(cmd.description)
           .setColor("GREEN")
-          //.addField("Name", cmd.name, true)
+          .addField("Name", cmd.name, true)
           .addField("Aliases", cmd.aliases.join(", "), true)
           .addField(
             "Usage",

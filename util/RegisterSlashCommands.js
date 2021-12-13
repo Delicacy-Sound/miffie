@@ -21,7 +21,7 @@ module.exports = (client, guild) => {
       let GuildAPI = ClientAPI.guilds(guild);
 
       client.log(
-        "[Slash Command]: [POST] Guild " +
+        "[Slash Command]: [✅] Guild " +
           guild +
           ", Command: " +
           dataStuff.name
@@ -30,7 +30,7 @@ module.exports = (client, guild) => {
         await GuildAPI.commands.post({ data: dataStuff });
       } catch (e) {
         client.log(
-          "[Slash Command]: [POST-FAILED] Guild " +
+          "[Slash Command]: [❌] Guild " +
             guild +
             ", Command: " +
             dataStuff.name

@@ -10,13 +10,7 @@ module.exports = {
     member: [],
   },
   aliases: ["st"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     const player = client.Manager.create({
       guild: message.guild.id,
@@ -63,13 +57,14 @@ module.exports = {
       //Send Success Message
       return client.sendTime(
         message.channel,
-        `⏭ Skipped \`${Number(args[0] - 1)}\` songs`
+        `❄ Skipped \`${Number(args[0] - 1)}\` songs`
       );
     } catch (e) {
       console.log(String(e.stack).bgRed);
       client.sendError(message.channel, "Something went wrong.");
     }
   },
+
   SlashCommand: {
     options: [
       {
@@ -80,13 +75,6 @@ module.exports = {
         description: "Skips to a specific song in the queue",
       },
     ],
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
     run: async (client, interaction, args, { GuildDB }) => {
       const guild = client.guilds.cache.get(interaction.guild_id);
       const member = guild.members.cache.get(interaction.member.user.id);
@@ -141,7 +129,7 @@ module.exports = {
         //Send Success Message
         return client.sendTime(
           interaction,
-          `⏭ Skipped \`${Number(skipTo)}\` songs`
+          `❄ Skipped \`${Number(skipTo)}\` songs`
         );
       } catch (e) {
         console.log(String(e.stack).bgRed);

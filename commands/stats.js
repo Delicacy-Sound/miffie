@@ -12,13 +12,7 @@ module.exports = {
     member: [],
   },
   aliases: ["about", "ping", "info"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message) => {
     const { version } = require("discord.js");
     cpuStat.usagePercent(async function (err, percent, seconds) {
@@ -90,14 +84,8 @@ module.exports = {
       return message.channel.send(embed);
     });
   },
+  
   SlashCommand: {
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
     run: async (client, interaction) => {
       const { version } = require("discord.js");
       cpuStat.usagePercent(async function (err, percent, seconds) {

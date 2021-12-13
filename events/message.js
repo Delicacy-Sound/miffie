@@ -1,9 +1,3 @@
-/**
- *
- * @param {require("../structures/DiscordMusicBot")} client
- * @param {require("discord.js").Message} message
- * @returns {void} aka: nothing ;-;
- */
 
 module.exports = async (client, message) => {
   if (message.author.bot || message.channel.type === "dm") return;
@@ -39,6 +33,7 @@ module.exports = async (client, message) => {
     client.commands.find((x) => x.aliases && x.aliases.includes(command));
 
   //Executing the codes when we get the command or aliases
+
   if (cmd) {
     if (
       (cmd.permissions &&

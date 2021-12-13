@@ -10,13 +10,7 @@ module.exports = {
     member: [],
   },
   aliases: [],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     let player = await client.Manager.get(message.guild.id);
     if (!player)
@@ -35,7 +29,7 @@ module.exports = {
     )
       return client.sendTime(
         message.channel,
-        ":x: | **You must be in the same voice channel as me to use this command!**"
+        "❌ | **You must be in the same voice channel as me to use this command!**"
       );
     if (player.paused)
       return client.sendTime(
@@ -52,13 +46,7 @@ module.exports = {
   },
 
   SlashCommand: {
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
+
     run: async (client, interaction, args, { GuildDB }) => {
       const guild = client.guilds.cache.get(interaction.guild_id);
       const member = guild.members.cache.get(interaction.member.user.id);
@@ -74,7 +62,7 @@ module.exports = {
       )
         return client.sendTime(
           interaction,
-          ":x: | **You must be in the same voice channel as me to use this command!**"
+          "❌ | **You must be in the same voice channel as me to use this command!**"
         );
 
       let player = await client.Manager.get(interaction.guild_id);

@@ -12,13 +12,7 @@ module.exports = {
     member: [],
   },
   aliases: ["se"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     if (!message.member.voice.channel)
       return client.sendTime(
@@ -44,7 +38,7 @@ module.exports = {
     if (!CheckNode || !CheckNode.connected) {
       return client.sendTime(
         message.channel,
-        "❌ | **Lavalink node not connected**"
+        "❌ | **Lavalink node is not connected**"
       );
     }
     const player = client.Manager.create({
@@ -163,18 +157,12 @@ module.exports = {
         description: "Enter the song name or url you want to search",
       },
     ],
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
+
     run: async (client, interaction, args, { GuildDB }) => {
       const guild = client.guilds.cache.get(interaction.guild_id);
       const member = guild.members.cache.get(interaction.member.user.id);
       const voiceChannel = member.voice.channel;
-      let awaitchannel = client.channels.cache.get(interaction.channel_id); /// thanks Reyansh for this idea ;-;
+      let awaitchannel = client.channels.cache.get(interaction.channel_id);
       if (!member.voice.channel)
         return client.sendTime(
           interaction,
@@ -247,7 +235,7 @@ module.exports = {
               player.play();
             return client.sendTime(
               interaction,
-              `**Playlist added to queue**: \n**${Searched.playlist.name}** \nEnqueued: **${Searched.playlistInfo.length} songs**`
+              `**❄ Playlist added to queue**: \n**${Searched.playlist.name}** \nEnqueued: **${Searched.playlistInfo.length} songs**`
             );
         }
       } else {

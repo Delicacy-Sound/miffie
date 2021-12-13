@@ -10,13 +10,7 @@ module.exports = {
     member: [],
   },
   aliases: ["l", "repeat"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     let player = await client.Manager.get(message.guild.id);
     if (!player)
@@ -46,14 +40,8 @@ module.exports = {
       client.sendTime(message.channel, `🔂 \`Enabled\``);
     }
   },
+  
   SlashCommand: {
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
     run: async (client, interaction, args, { GuildDB }) => {
       const guild = client.guilds.cache.get(interaction.guild_id);
       const member = guild.members.cache.get(interaction.member.user.id);

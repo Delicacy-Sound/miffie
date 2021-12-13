@@ -10,13 +10,7 @@ module.exports = {
     member: [],
   },
   aliases: ["forward"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     let player = await client.Manager.get(message.guild.id);
     if (!player)
@@ -46,12 +40,12 @@ module.exports = {
     if (!SeekTo)
       return client.sendTime(
         message.channel,
-        `**Usage - **\`${GuildDB.prefix}seek <number s/m/h>\` \n**Example - **\`${GuildDB.prefix}seek 2m 10s\``
+        `**Use: **\`${GuildDB.prefix}seek <number s/m/h>\` \n**Example - **\`${GuildDB.prefix}seek 2m 10s\``
       );
     player.seek(SeekTo * 1000);
-    message.react("✅");
+    message.react("❄");
   },
-  /*
+
     SlashCommand: {
         options: [
             {
@@ -60,13 +54,7 @@ module.exports = {
                 value: "position",
                 type: 3,
                 required: true,
-                //**
-                *
-                * @param {import("../structures/DiscordMusicBot")} client
-                * @param {import("discord.js").Message} message
-                * @param {string[]} args
-                * @param {*} param3
-                *
+
                 run: async (client, interaction, args, { GuildDB }) => {
                     const guild = client.guilds.cache.get(interaction.guild_id);
                     const member = guild.members.cache.get(interaction.member.user.id);
@@ -79,10 +67,9 @@ module.exports = {
                     let SeekTo = client.ParseHumanTime(interaction.data.options[0].value);
                     if (!SeekTo) return client.sendTime(interaction, `**Usage - **\`${GuildDB.prefix}seek <number s/m/h>\` \n**Example -** \`${GuildDB.prefix}seek 2m 10s\``);
                     player.seek(SeekTo * 1000);
-                    client.sendTime(interaction, "✅ | **Successfully moved the song to **", `\`${Seekto}\``);
+                    client.sendTime(interaction, "❄ | **Successfully moved the song to **", `\`${Seekto}\``);
                 },
             },
         ],
     },
-*/
 };

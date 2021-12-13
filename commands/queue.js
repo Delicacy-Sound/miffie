@@ -11,13 +11,7 @@ module.exports = {
     member: [],
   },
   aliases: ["q"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     let player = await client.Manager.get(message.guild.id);
     if (!player.queue.current)
@@ -57,7 +51,7 @@ module.exports = {
       return t;
     });
 
-    let ChunkedSongs = _.chunk(Songs, 10); //How many songs to show per-page
+    let ChunkedSongs = _.chunk(Songs, 10);
 
     let Pages = ChunkedSongs.map((Tracks) => {
       let SongsDescription = Tracks.map(
@@ -74,7 +68,7 @@ module.exports = {
         .setAuthor("Queue", client.botconfig.IconURL)
         .setColor(client.botconfig.EmbedColor)
         .setDescription(
-          `**Currently Playing:** \n[${player.queue.current.title}](${player.queue.current.uri}) \n\n**Up Next:** \n${SongsDescription}\n\n`
+          `**❄ Currently Playing: ❄** \n[${player.queue.current.title}](${player.queue.current.uri}) \n\n**Up Next:** \n${SongsDescription}\n\n`
         )
         .addField("Total songs: \n", `\`${player.queue.totalSize - 1}\``, true)
         .addField(
@@ -120,13 +114,6 @@ module.exports = {
       },
   ],
   */
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
     run: async (client, interaction, args, { GuildDB }) => {
       let player = await client.Manager.get(interaction.guild_id);
       if (!player)
@@ -137,7 +124,7 @@ module.exports = {
 
       if (!player.queue || !player.queue.length || player.queue === 0) {
         let QueueEmbed = new MessageEmbed()
-          .setAuthor("Currently playing", client.botconfig.IconURL)
+          .setAuthor("❄ Currently playing ❄", client.botconfig.IconURL)
           .setColor(client.botconfig.EmbedColor)
           .setDescription(
             `[${player.queue.current.title}](${player.queue.current.uri})`
@@ -182,7 +169,7 @@ module.exports = {
           .setAuthor("Queue", client.botconfig.IconURL)
           .setColor(client.botconfig.EmbedColor)
           .setDescription(
-            `**Currently Playing:** \n[${player.queue.current.title}](${player.queue.current.uri}) \n\n**Up Next:** \n${SongsDescription}\n\n`
+            `**❄ Currently Playing: ❄** \n[${player.queue.current.title}](${player.queue.current.uri}) \n\n**Up Next:** \n${SongsDescription}\n\n`
           )
           .addField(
             "Total songs: \n",

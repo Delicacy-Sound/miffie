@@ -9,22 +9,16 @@ module.exports = {
     member: [],
   },
   aliases: ["inv"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     let embed = new MessageEmbed()
       .setAuthor(
         "Invite " + client.user.tag + " to your server!",
         client.user.displayAvatarURL()
       )
-      .setColor("BLUE")
+      .setColor("RANDOM")
       .setDescription(
-        `You can invite me by clicking [here](https://discord.com/oauth2/authorize?client_id=${
+        `You can invite me by clicking [❄ here ❄](https://discord.com/oauth2/authorize?client_id=${
           client.botconfig.ClientID
         }&permissions=${
           client.botconfig.Permissions
@@ -34,23 +28,17 @@ module.exports = {
       );
     message.channel.send(embed);
   },
+
   SlashCommand: {
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
     run: async (client, interaction, args, { GuildDB }) => {
       let embed = new MessageEmbed()
         .setAuthor(
           "Invite " + client.user.tag + " to your server!",
           client.user.displayAvatarURL()
         )
-        .setColor("BLUE")
+        .setColor("RANDOM")
         .setDescription(
-          `You can invite me by clicking [here](https://discord.com/oauth2/authorize?client_id=${
+          `You can invite me by clicking [❄ here ❄](https://discord.com/oauth2/authorize?client_id=${
             client.botconfig.ClientID
           }&permissions=${
             client.botconfig.Permissions

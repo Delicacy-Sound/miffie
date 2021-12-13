@@ -10,13 +10,7 @@ module.exports = {
     member: [],
   },
   aliases: ["s", "next"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     let player = await client.Manager.get(message.guild.id);
     if (!player)
@@ -38,16 +32,10 @@ module.exports = {
         ":x: | **You must be in the same voice channel as me to use this command!**"
       );
     player.stop();
-    await message.react("✅");
+    await message.react("❄");
   },
+
   SlashCommand: {
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
     run: async (client, interaction, args, { GuildDB }) => {
       const guild = client.guilds.cache.get(interaction.guild_id);
       const member = guild.members.cache.get(interaction.member.user.id);

@@ -9,13 +9,7 @@ module.exports = {
     member: [],
   },
   aliases: ["shuff"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     let player = await client.Manager.get(message.guild.id);
     if (!player)
@@ -42,16 +36,10 @@ module.exports = {
         "❌ | **Not enough songs in the queue to shuffle!**"
       );
     player.queue.shuffle();
-    await client.sendTime(message.channel, "✅ | Shuffled the queue!");
+    await client.sendTime(message.channel, "❄ | Shuffled the queue!");
   },
+
   SlashCommand: {
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
     run: async (client, interaction, args, { GuildDB }) => {
       const guild = client.guilds.cache.get(interaction.guild_id);
       const member = guild.members.cache.get(interaction.member.user.id);
@@ -82,7 +70,7 @@ module.exports = {
           "❌ | **Not enough songs in the queue to shuffle!**"
         );
       player.queue.shuffle();
-      client.sendTime(interaction, "✅ | Shuffled the queue!");
+      client.sendTime(interaction, "❄ | Shuffled the queue!");
     },
   },
 };
