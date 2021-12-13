@@ -46,5 +46,5 @@
 
 ## Copyrights and License
 
-LICENSE: **MIT**
-Copyright © 2021
+LICENSE: [**MIT**](LICENSE)
+> **Copyright Miffie © 2021**
