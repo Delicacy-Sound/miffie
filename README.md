@@ -24,7 +24,7 @@
 
 > Примечание: Lavalink необходим для работы с музыкой. У вас должен быть рабочий сервер Lavalink, чтобы бот работал.
 
-## ❄️ Feautures
+## ❄️ Возможности бота
 
 <div align="left"><img src="https://media.discordapp.net/attachments/849008433143087119/919769062236622948/Screenshot_2021-12-12_2.50.04_PM.png"></div>
 
