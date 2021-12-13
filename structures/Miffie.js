@@ -15,7 +15,7 @@ require("discordjs-activity"); //Epic Package, For more details: https://www.npm
 require("./EpicPlayer"); //idk why im doing but i wanna learn something new so...
 
 
-class DiscordMusicBot extends Client {
+class Miffie extends Client {
   constructor(props) {
     super(props);
 
@@ -107,7 +107,6 @@ class DiscordMusicBot extends Client {
         cmd.SlashCommand.run(this, interaction, args, { GuildDB });
     });
 
-    //because not worked lol ;-;
     const client = this;
 
     this.Lavasfy = new LavasfyClient(
@@ -265,4 +264,4 @@ class DiscordMusicBot extends Client {
   }
 }
 
-module.exports = DiscordMusicBot;
+module.exports = Miffie;

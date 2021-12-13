@@ -1,7 +1,7 @@
 {
   "name": "Miffie",
-  "description": "Very simple discord music bot with the discord.js with Song Name playing. It can able to play music with the song name",
-  "repository": "https://github.com/delicacysound/miffie",
+  "description": "❄ The best tool to customize your music to suit your mood. Use all the features of the bot to cheer yourself up",
+  "repository": "https://github.com/Delicacy-Sound/miffie",
   "logo": "https://media.discordapp.net/attachments/899004161687973998/899037716111573062/PicsArt_10-16-02.54.09.png",
   "keywords": [
     "node",

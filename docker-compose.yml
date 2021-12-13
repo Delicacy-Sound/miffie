@@ -3,7 +3,7 @@ version: "3"
 services:
   miffie:
     build: .
-    image: discord-musicbot:latest
+    image: miffie:latest
     container_name: miffie
     restart: unless-stopped
     networks:

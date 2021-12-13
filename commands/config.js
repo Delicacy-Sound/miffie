@@ -9,13 +9,7 @@ module.exports = {
     member: ["ADMINISTRATOR"],
   },
   aliases: ["conf"],
-  /**
-   *
-   * @param {import("../structures/DiscordMusicBot")} client
-   * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
-   */
+
   run: async (client, message, args, { GuildDB }) => {
     let Config = new MessageEmbed()
       .setAuthor("Server Config", client.botconfig.IconURL)
@@ -51,8 +45,7 @@ What would you like to edit?
     } catch {
       isOk = true;
     }
-    if (isOk) return; //im idiot sry ;-;
-    /**@type {MessageReaction} */
+    if (isOk) return;
     let em = emoji;
     ConfigMessage.reactions.removeAll();
     if (em._emoji.name === "1️⃣") {
@@ -146,13 +139,7 @@ What would you like to edit?
         ],
       },
     ],
-    /**
-     *
-     * @param {import("../structures/DiscordMusicBot")} client
-     * @param {import("discord.js").Message} message
-     * @param {string[]} args
-     * @param {*} param3
-     */
+
     run: async (client, interaction, args, { GuildDB }) => {
       let config = interaction.data.options[0].name;
       let member = await interaction.guild.members.fetch(interaction.user_id);

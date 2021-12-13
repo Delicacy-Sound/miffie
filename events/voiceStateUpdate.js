@@ -1,4 +1,4 @@
-const { DiscordMusicBot } = require("../structures/DiscordMusicBot");
+const { Miffie } = require("../structures/Miffie");
 const { VoiceState, MessageEmbed } = require("discord.js");
 
 module.exports = async (client, oldState, newState) => {

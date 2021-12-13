@@ -1,4 +1,4 @@
-const Miffie = require("./structures/DiscordMusicBot");
+const Miffie = require("./structures/Miffie");
 const Discord = require('discord.js');
 const client = new Miffie();
 
