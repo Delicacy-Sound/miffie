@@ -1,4 +1,4 @@
-<h1 align="center"><img src="./assets/logo.png" width="30px"> Miffie <img src="./assets/logo.png" width="30px"></h1>
+<h1 align="center"><img src="./assets/logo.png" width="500px"></h1>
 
 ## ❄️Последнее обновление
 [ Release 2.0.1 ] 
@@ -24,11 +24,9 @@
 
 > Примечание: Lavalink необходим для работы с музыкой. У вас должен быть рабочий сервер Lavalink, чтобы бот работал.
 
-## 📸 Screenshots
+## ❄️ Feautures
 
-<div align="left"><img src="/assets/Screenshot_1.png"></div><div align="center"><img src="/assets/Screenshot_2.png"></div><div align="right"><img src="/assets/Screenshot_3.png"></div>
-
-<div align="center"><img src="/assets/features.png"></div>
+<div align="left"><img src="https://media.discordapp.net/attachments/849008433143087119/919769062236622948/Screenshot_2021-12-12_2.50.04_PM.png"></div>
 
 
 ## ✨ Разработчики
