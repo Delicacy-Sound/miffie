@@ -1,6 +1,6 @@
 <h1 align="center"><img src="./assets/logo.png" width="30px"> Miffie <img src="./assets/logo.png" width="30px"></h1>
 
-## ✨Последнее обновление
+## ❄️Последнее обновление
 [ Release 2.0.1 ] 
 
 • Commands style update. Now each team is in line with the upcoming holidays and looks very beautiful.
@@ -42,19 +42,9 @@
 
 > **Заметка:** Взносы не принимаются в основной ветке. Если вы хотите внести свой вклад, напишите нам на почту лично!
 
-## ✨ Наши интеграции
-
-<script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
-    new Crate({
-        server: '849008432526524416', // 几卂ㄒ乇   卄ㄖㄩ丂乇
-        channel: '849008433143087121' // #「⚫」❯・config
-    })
-</script>
-
-
-
 Сделано с :heart: и Node JS!
 
-## Copyrights and Licence
+## Copyrights and License
 
-3
+LICENSE: **MIT**
+Copyright © 2021
