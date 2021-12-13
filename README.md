@@ -1,4 +1,4 @@
-<h1 align="center"><img src="./assets/logo.png" width="500px"></h1>
+<h1 align="center"><img src="./assets/logo.png" width="250px"></h1>
 
 ## ❄️Последнее обновление
 [ Release 2.0.1 ] 
