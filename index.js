@@ -21,7 +21,7 @@ client.on("guildCreate", guild => {
     .setColor('RANDOM')
     .setTitle('💜 | Thank You for choosing **Miffie**!')
     .setDescription('⭐ Miffie is best tool to customize your music to suit your mood. Use all the features of the bot to cheer yourself up 🌺')
-    .addField('To list all available bot commands use `m/help` or `/help`', `[Support Server](${client.botconfig.SupportServer}) • [VK Page](https://vk.com/delicacysound) • [Website](https://miffie.delicacysound.repl.co/) • [Monitoring](https://monitoring.delicacysound.repl.co/)`)
+    .addField('To list all available bot commands use `m/help` or `/help`', `[Support Server](${client.botconfig.SupportServer}) • [VK Page](https://vk.com/delicacysound) • [Website](https://miffie.delicacysound.repl.co/) • [GitHub](https://github.com/Delicacy-Sound/miffie)`)
     .setThumbnail('https://media.discordapp.net/attachments/914242243659968545/919733958550388756/PicsArt_12-12-02.29.02.png')
 
   channel.send(miffie);
@@ -34,7 +34,8 @@ client.on("message", message => {
 
     if (message.mentions.has(client.user.id)) {
         const mention = new Discord.MessageEmbed()
-          .setTitle('My prefix is `m/`')
+          .setTitle(`My default prefix is __${client.botconfig.DefaultPrefix}__`)
+          .setDescription('You can change the default prefix to whatever You want with the command `m/config`')
           .setColor('RANDOM')
         message.channel.send(mention);
     };

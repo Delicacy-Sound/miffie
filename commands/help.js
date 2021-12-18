@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+// const { Linguini, Utils } = require('linguini');
 
 module.exports = {
   name: "help",
@@ -19,10 +20,7 @@ module.exports = {
     );
 
     let Embed = new MessageEmbed()
-      .setAuthor(
-        `❄ Commands of ${client.user.username} ❄`,
-        client.botconfig.IconURL
-      )
+      .setAuthor(`❄ Commands of ${client.user.username} ❄`)
       .setColor(client.botconfig.EmbedColor)
       .setFooter(
         `To get info of each command type ${
@@ -33,7 +31,7 @@ module.exports = {
   Miffie Version: v${require("../package.json").version}
   [Support Server](${
     client.botconfig.SupportServer
-  }) • [VK Page](https://vk.com/delicacysound) • [Website](https://miffie.delicacysound.repl.co/) • [Monitoring](https://monitoring.delicacysound.repl.co/)`);
+  }) • [VK Page](https://vk.com/delicacysound) • [Website](https://miffie.delicacysound.repl.co/) • [GitHub](https://github.com/Delicacy-Sound/miffie)`);
     if (!args[0]) message.channel.send(Embed);
     else {
       let cmd =
@@ -110,7 +108,7 @@ module.exports = {
   Miffie Version: v${require("../package.json").version}
   [Support Server](${
     client.botconfig.SupportServer
-  }) • [VK Page](https://vk.com/delicacysound) • [Website](https://miffie.delicacysound.repl.co/) • [Monitoring](https://monitoring.delicacysound.repl.co/)`);
+  }) • [VK Page](https://vk.com/delicacysound) • [Website](https://miffie.delicacysound.repl.co/) • [GitHub](https://github.com/Delicacy-Sound/miffie)`);
       if (!args) return interaction.send(Embed);
       else {
         let cmd =

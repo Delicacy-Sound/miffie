@@ -10,9 +10,10 @@ const Express = require("express");
 const Logger = require("./Logger");
 const prettyMilliseconds = require("pretty-ms");
 
-//Class extending Stuff
-require("discordjs-activity"); //Epic Package, For more details: https://www.npmjs.com/package/discordjs-activity
-require("./EpicPlayer"); //idk why im doing but i wanna learn something new so...
+// const { Linguini, Utils } = require('linguini');
+
+require("discordjs-activity");
+require("./EpicPlayer");
 
 
 class Miffie extends Client {
@@ -25,16 +26,13 @@ class Miffie extends Client {
     this.SongsPlayed = 0;
 
     this.database = {
-      //Saved at jsoning node_modules directory, DOCS: https://jsoning.js.org/
-      guild: new Jsoning("guild.json"), //Server Config
+      guild: new Jsoning("guild.json"),
     };
     this.logger = new Logger(path.join(__dirname, "..", "Logs.log"));
 
     try {
-      //Config for testing
       this.botconfig = require("../dev-config");
     } catch {
-      //Config for production
       this.botconfig = require("../botconfig");
     }
     if (this.botconfig.Token === "")
@@ -45,14 +43,13 @@ class Miffie extends Client {
     this.LoadCommands();
     this.LoadEvents();
 
-    //Web Stuff
+
     this.server = Express();
     this.http = http.createServer(this.server);
     this.server.use("/", require("../api"));
     this.io = new Server(this.http);
     require("../api/socket")(this.io);
 
-    //Utils
     this.ProgressBar = require("../util/ProgressBar");
     this.Pagination = require("../util/pagination");
     this.ParseHumanTime = (str) => {
@@ -68,11 +65,9 @@ class Miffie extends Client {
 
     this.Ready = false;
 
-    //idk where do i do it so i did it here ;-;
     this.ws.on("INTERACTION_CREATE", async (interaction) => {
       let GuildDB = await this.GetGuild(interaction.guild_id);
 
-      //Initialize GuildDB
       if (!GuildDB) {
         await this.database.guild.set(interaction.guild_id, {
           prefix: this.botconfig.DefaultPrefix,
@@ -128,6 +123,10 @@ class Miffie extends Client {
         },
       ]
     );
+   
+
+
+
 
     this.Manager = new Manager({
       nodes: [

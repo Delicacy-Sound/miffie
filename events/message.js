@@ -1,4 +1,5 @@
 
+
 module.exports = async (client, message) => {
   if (message.author.bot || message.channel.type === "dm") return;
   let prefix = client.botconfig.DefaultPrefix;

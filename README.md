@@ -1,19 +1,16 @@
 <h1 align="center"><img src="./assets/logo.png" width="250px"></h1>
 
 ## ❄️Последнее обновление
-[ Release 2.0.1 ] 
 
-• Commands style update. Now each team is in line with the upcoming holidays and looks very beautiful.
+• Update of web address of the [website](https://miffie.tk)
 
-• Avatar update
+• Bug fixes
 
-• Little changes in important commads & bug fixes. Now bot works better.
+• Changes in reaction on mention & welcome message
 
-• Added reaction on mention
+• Release of some commands
 
-• Changed status from static to dynamic
-
-• Created message that will be sent when bot will join to a new guild
+• We changed a hosting of our database, which will affect to quality of songs and bot in general
 
 
 ## 🚧 Требования системы 

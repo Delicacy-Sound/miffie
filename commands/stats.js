@@ -2,6 +2,7 @@ const { MessageEmbed } = require("discord.js");
 require("moment-duration-format");
 const cpuStat = require("cpu-stat");
 const moment = require("moment");
+// const { Linguini, Utils } = require('linguini');
 
 module.exports = {
   name: "stats",

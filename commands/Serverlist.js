@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const ownerid = "528930032823959562";
+// const { Linguini, Utils } = require('linguini');
 
 module.exports = {
     name: "serverlist",
@@ -19,6 +20,7 @@ module.exports = {
 
       let description =
         `Total Servers - ${bot.guilds.cache.size}\n\n` +
+        `Total Users - ${bot.users.cache.size}\n\n` +
         bot.guilds.cache
           .sort((a, b) => b.memberCount - a.memberCount)
           .map(r => r)

@@ -1,4 +1,5 @@
 const { MessageEmbed, MessageReaction } = require("discord.js");
+// const { Linguini, Utils } = require('linguini');
 
 module.exports = {
   name: "config",
