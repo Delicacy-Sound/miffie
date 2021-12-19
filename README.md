@@ -2,16 +2,17 @@
 
 ## ❄️Последнее обновление
 
-• Update of web address of the [website](https://miffie.tk)
+• [Website](https://miffie.tk) has been modified 
 
-• Bug fixes
+• We have reached 50 servers
 
-• Changes in reaction on mention & welcome message
+• We have been created the project's server on Discord
 
 • Release of some commands
 
 • We changed a hosting of our database, which will affect to quality of songs and bot in general
 
+<div align="left"><img src="https://media.discordapp.net/attachments/921513281225633822/921639484636942356/Screenshot_2021-12-17_10.45.42_PM.png?width=401&height=451"></div>
 
 ## 🚧 Требования системы 
 
@@ -23,7 +24,7 @@
 
 ## ❄️ Возможности бота
 
-<div align="left"><img src="https://media.discordapp.net/attachments/849008433143087119/919769062236622948/Screenshot_2021-12-12_2.50.04_PM.png"></div>
+<div align="left"><img src="https://media.discordapp.net/attachments/921513281225633822/921639484636942356/Screenshot_2021-12-17_10.45.42_PM.png?width=401&height=451"></div>
 
 
 ## ✨ Разработчики

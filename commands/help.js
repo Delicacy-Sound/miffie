@@ -31,7 +31,7 @@ module.exports = {
   Miffie Version: v${require("../package.json").version}
   [Support Server](${
     client.botconfig.SupportServer
-  }) • [VK Page](https://vk.com/delicacysound) • [Website](https://miffie.delicacysound.repl.co/) • [GitHub](https://github.com/Delicacy-Sound/miffie)`);
+  }) • [VK Page](https://vk.com/delicacystudios) • [Website](https://miffie.tk) • [GitHub](https://github.com/Delicacy-Sound/miffie)`);
     if (!args[0]) message.channel.send(Embed);
     else {
       let cmd =
@@ -108,7 +108,7 @@ module.exports = {
   Miffie Version: v${require("../package.json").version}
   [Support Server](${
     client.botconfig.SupportServer
-  }) • [VK Page](https://vk.com/delicacysound) • [Website](https://miffie.delicacysound.repl.co/) • [GitHub](https://github.com/Delicacy-Sound/miffie)`);
+  }) • [VK Page](https://vk.com/delicacystudios) • [Website](https://miffie.tk) • [GitHub](https://github.com/Delicacy-Sound/miffie)`);
       if (!args) return interaction.send(Embed);
       else {
         let cmd =
