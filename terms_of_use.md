@@ -35,7 +35,7 @@ You must protect the security of your Third Party Account credentials and passwo
 Are there restrictions in how I can use the Services?
 You represent, warrant, and agree that you will not contribute any Content or User Submission (each of those terms is defined below) or otherwise use the Services or interact with the Services in a manner that:
 
-```(a) infringes or violates the intellectual property rights or any other rights of anyone else (including Delicacy Studios);
+(a) infringes or violates the intellectual property rights or any other rights of anyone else (including Delicacy Studios);
 (b) violates any law or regulation, including, without limitation, any applicable export control laws, privacy laws or any other purpose not reasonably intended by Delicacy Studios;
 (c) is dangerous, harmful, fraudulent, deceptive, threatening, harassing, defamatory, obscene, or otherwise objectionable;
 (d) jeopardizes the security of your account or anyone else’s (such as allowing someone else to log in to the Services as you);
@@ -44,7 +44,7 @@ You represent, warrant, and agree that you will not contribute any Content or Us
 (g) runs Maillist, Listserv, any form of auto-responder or “spam” on the Services, or any processes that run or are activated while you are not logged into the Services, or that otherwise interfere with the proper working of the Services (including by placing an unreasonable load on the Services’ infrastructure);
 (h) “crawls,” “scrapes,” or “spiders” any page, data, or portion of or relating to the Services or Content (through use of manual or automated means);(h) “crawls,” “scrapes,” or “spiders” any page, data, or portion of or relating to the Services or Content (through use of manual or automated means);
 (i) copies or stores any significant portion of the Content; or
-(j) decompiles, reverse engineers, or otherwise attempts to obtain the source code or underlying ideas or information of or relating to the Services.```
+(j) decompiles, reverse engineers, or otherwise attempts to obtain the source code or underlying ideas or information of or relating to the Services.
 A violation of any of the foregoing is grounds for termination of your right to use or access the Services.
 
 ## What are my rights in the Services?
