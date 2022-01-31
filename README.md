@@ -1,9 +1,8 @@
-
-
 <img width="170" height="170" align="left" style="float: left; margin: 0 10px 0 0; border-radius: 50%;" alt="Miffie's logo" src="./assets/logo.jpg">  
-
 # Miffie
 🇺🇸 | Miffie is a good tool to customise your music to suit your mood. Use all the features of the bot to cheer yourself up
+
+🇷🇺 | Miffie — хороший инструмент для настройки музыки в соответствии с вашим настроением
 
 
 ## The lastest update
