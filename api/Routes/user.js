@@ -12,4 +12,4 @@ api.get("/", async (req, res) => {
   res.send({ user: req.user });
 });
 
-module.exports = api;
+module.exports = api; // updated

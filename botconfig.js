@@ -6,17 +6,19 @@ module.exports = {
   SupportServer: "https://discord.gg/pMahg5Aama",
   Token: process.env["TOKEN"],
   ClientID: process.env.Discord_ClientID || "874396158741594113",
-  ClientSecret: process.env.ClientSecret || "PlvGXFnGlMgeqJxJyj7x7jGUuzM4mAyp",
+  ClientSecret: process.env.ClientSecret || process.env['ClientSecret'],
   Scopes: ["identify", "guilds", "applications.commands"],
   ServerDeafen: true,
   DefaultVolume: 100,
   CallbackURL: "/api/callback",
   "24/7": false,
   CookieSecret: "Pikachu is sick",
-  IconURL: "https://media.discordapp.net/attachments/910378735998496808/913609767199588382/PicsArt_11-25-06.56.44.png",
-  EmbedColor: "RANDOM",
-  Permissions: 2205281600,
-  Website: process.env.Website || "https://miffie.tk",
+  IconURL: "https://media.discordapp.net/attachments/924403120098934835/937471229147902042/PicsArt_01-30-02.29.14.jpg",
+  EmbedColor: "#303237",
+  Permissions: 8,
+  Website: process.env.Website || "https://miffie.natedev.tk",
+
+  locale: "en", // in developing
 
   Lavalink: {
     id: "Main",
@@ -29,5 +31,5 @@ module.exports = {
   Spotify: {
     ClientID: process.env["$Spotify_ClientID"],
     ClientSecret: process.env["$ClientSercretSP"],
-  },
+  }
 };

@@ -1,12 +1,8 @@
 const { Server } = require("socket.io");
 const prettyMilliseconds = require("pretty-ms");
 
-/**
- * @param {Server} io
- */
 module.exports = (io) => {
   io.on("connection", (socket) => {
-    //Bot's Main Page
     socket.on("dashboard", () => {
       if (socket.Dashboard) clearInterval(socket.Dashboard);
       socket.Dashboard = setInterval(() => {

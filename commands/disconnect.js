@@ -10,6 +10,7 @@ module.exports = {
     member: [],
   },
   aliases: ["leave", "exit", "quit", "dc", "stop"],
+  
   run: async (client, message, args, { GuildDB }) => {
     let player = await client.Manager.get(message.guild.id);
     if (!message.member.voice.channel)

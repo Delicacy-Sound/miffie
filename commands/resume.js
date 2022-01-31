@@ -74,7 +74,7 @@ module.exports = {
           "❌ | **Music is already resumed!**"
         );
       player.pause(false);
-      client.sendTime(interaction, "**❄ Resumed!**");
+      client.sendTime(interaction, "**♡ Resumed!**");
     },
   },
 };

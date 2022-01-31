@@ -18,9 +18,9 @@ client.on("guildCreate", guild => {
   }
   let channel = guild.channels.cache.get(guild.systemChannelID || channelID);
   const miffie = new Discord.MessageEmbed()
-    .setColor('RANDOM')
+    .setColor(client.botconfig.EmbedColor)
     .setTitle('💜 | Thank You for choosing **Miffie**!')
-    .setDescription('⭐ Miffie is best tool to customize your music to suit your mood. Use all the features of the bot to cheer yourself up 🌺')
+    .setDescription('⭐ Miffie is a good tool to customise your music to suit your mood. Use all the features of the bot to cheer yourself up 🌺')
     .addField('To list all available bot commands use `m/help` or `/help`', `[Support Server](${client.botconfig.SupportServer}) • [VK Page](https://vk.com/delicacystudios) • [Website](https://miffie.tk) • [GitHub](https://github.com/Delicacy-Sound/miffie)`)
     .setThumbnail('https://media.discordapp.net/attachments/914242243659968545/919733958550388756/PicsArt_12-12-02.29.02.png')
 
@@ -36,15 +36,14 @@ client.on("message", message => {
         const mention = new Discord.MessageEmbed()
           .setTitle('My default prefix is `m/`')
           .setDescription('You can change the default prefix to whatever You want with the command `m/config` (Prefix on your server could be changed)')
-          .setColor('RANDOM')
+          .setColor(client.botconfig.EmbedColor)
         message.channel.send(mention);
     };
 });
 
+
 const activities = [
-  "m/help | /help",
-  "❄ Marry Christmas ❄",
-  "❄ Marry Christmas ❄",
+  "NateAles's Cafe",
   "m/help | /help"
 ];
   

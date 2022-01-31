@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-// const { Linguini, Utils } = require('linguini');
 
 module.exports = {
   name: "help",
@@ -20,18 +19,19 @@ module.exports = {
     );
 
     let Embed = new MessageEmbed()
-      .setAuthor(`❄ Commands of ${client.user.username} ❄`)
+      .setAuthor(`♡ Commands of ${client.user.username} ♡`, client.user.displayAvatarURL()
+      )
       .setColor(client.botconfig.EmbedColor)
       .setFooter(
         `To get info of each command type ${
           GuildDB ? GuildDB.prefix : client.botconfig.DefaultPrefix
-        }help [Command] | Marry Christmas!`
+        }help [Command] | NateDev!`
       ).setDescription(`${Commands.join("\n")}
   
   Miffie Version: v${require("../package.json").version}
   [Support Server](${
     client.botconfig.SupportServer
-  }) • [VK Page](https://vk.com/delicacystudios) • [Website](https://miffie.tk) • [GitHub](https://github.com/Delicacy-Sound/miffie)`);
+  }) • [VK Page](https://vk.com/delicacystudios) • [Website](https://miffie.natedev.tk) • [GitHub](https://github.com/Delicacy-Sound/miffie)`);
     if (!args[0]) message.channel.send(Embed);
     else {
       let cmd =
@@ -93,23 +93,23 @@ module.exports = {
           }${cmd.usage ? " " + cmd.usage : ""}\` - ${cmd.description}`
       );
 
-      let Embed = new MessageEmbed()
+      let Embed1 = new MessageEmbed()
         .setAuthor(
-          `❄ Commands of ${client.user.username} ❄`,
+          `♡ Commands of ${client.user.username} ♡`,
           client.botconfig.IconURL
         )
         .setColor(client.botconfig.EmbedColor)
         .setFooter(
           `To get info of each command type ${
             GuildDB ? GuildDB.prefix : client.botconfig.DefaultPrefix
-          }help [Command] | Marry Christmas!`
+          }help [Command] | NateDev!`
         ).setDescription(`${Commands.join("\n")}
   
   Miffie Version: v${require("../package.json").version}
   [Support Server](${
     client.botconfig.SupportServer
-  }) • [VK Page](https://vk.com/delicacystudios) • [Website](https://miffie.tk) • [GitHub](https://github.com/Delicacy-Sound/miffie)`);
-      if (!args) return interaction.send(Embed);
+  }) • [VK Page](https://vk.com/delicacystudios) • [Website](https://miffie.natedev.tk) • [GitHub](https://github.com/Delicacy-Sound/miffie)`);
+      if (!args) return interaction.send(Embed1);
       else {
         let cmd =
           client.commands.get(args[0].value) ||
@@ -122,7 +122,7 @@ module.exports = {
             `❌ | Unable to access this command due to *Unkown command*.`
           );
 
-        let embed = new MessageEmbed()
+        let embed1 = new MessageEmbed()
           .setAuthor(`Command: ${cmd.name}`, client.botconfig.IconURL)
           .setDescription(cmd.description)
           .setColor("GREEN")
@@ -149,9 +149,9 @@ module.exports = {
             }`
           );
 
-        interaction.send(embed);
+        interaction.send(embed1);
       }
     },
   },
-};
+}; 
 

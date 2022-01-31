@@ -33,7 +33,7 @@ module.exports = {
         ":x: | **You must be in the same voice channel as me to use this command!**"
       );
     player.stop();
-    await message.react("❄");
+    await message.react("♡");
   },
 
   SlashCommand: {
@@ -73,7 +73,7 @@ module.exports = {
       )
         return client.sendTime(interaction, "❌ | **Invalid number to skip!**");
       player.stop(skipTo);
-      client.sendTime(interaction, "**Skipped!**");
+      client.sendTime(interaction, "**♡ Skipped ♡**");
     },
   },
 };

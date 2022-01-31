@@ -69,7 +69,7 @@ module.exports = {
         .setAuthor("Queue", client.botconfig.IconURL)
         .setColor(client.botconfig.EmbedColor)
         .setDescription(
-          `**❄ Currently Playing: ❄** \n[${player.queue.current.title}](${player.queue.current.uri}) \n\n**Up Next:** \n${SongsDescription}\n\n`
+          `**♡ Currently Playing: ♡** \n[${player.queue.current.title}](${player.queue.current.uri}) \n\n**Up Next:** \n${SongsDescription}\n\n`
         )
         .addField("Total songs: \n", `\`${player.queue.totalSize - 1}\``, true)
         .addField(
@@ -125,7 +125,7 @@ module.exports = {
 
       if (!player.queue || !player.queue.length || player.queue === 0) {
         let QueueEmbed = new MessageEmbed()
-          .setAuthor("❄ Currently playing ❄", client.botconfig.IconURL)
+          .setAuthor("♡ Currently playing ♡", client.botconfig.IconURL)
           .setColor(client.botconfig.EmbedColor)
           .setDescription(
             `[${player.queue.current.title}](${player.queue.current.uri})`
@@ -170,7 +170,7 @@ module.exports = {
           .setAuthor("Queue", client.botconfig.IconURL)
           .setColor(client.botconfig.EmbedColor)
           .setDescription(
-            `**❄ Currently Playing: ❄** \n[${player.queue.current.title}](${player.queue.current.uri}) \n\n**Up Next:** \n${SongsDescription}\n\n`
+            `**♡ Currently Playing: ♡** \n[${player.queue.current.title}](${player.queue.current.uri}) \n\n**Up Next:** \n${SongsDescription}\n\n`
           )
           .addField(
             "Total songs: \n",

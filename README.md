@@ -1,44 +1,118 @@
-<h1 align="center"><img src="./assets/logo.png" width="250px"></h1>
+<h1 align="center"><img src="./assets/logo.jpg" width="250px"></h1>
 
-## ❄️Последнее обновление
+<img width="170" height="170" align="left" style="float: left; margin: 0 10px 0 0; border-radius: 50%;" alt="Miffie's logo" src="./assets/logo.jpg">  
 
-• [Website](https://miffie.tk) has been modified 
+# Miffie
+🇺🇸 | Miffie is a good tool to customise your music to suit your mood. Use all the features of the bot to cheer yourself up
 
-• We have reached 50 servers
 
-• We have been created the project's server on Discord
+## The lastest update
 
-• Release of some commands
+• Embed color changes
 
-• We changed a hosting of our database, which will affect to quality of songs and bot in general
+• Absolutely new dashboard / Modifying web
 
-<div align="left"><img src="https://media.discordapp.net/attachments/921513281225633822/921639484636942356/Screenshot_2021-12-17_10.45.42_PM.png?width=401&height=451"></div>
+• Migrating to new [web address](https://miffie.natedev.tk)
 
-## 🚧 Требования системы 
+• Release of all commands
+
+• Major bug fixes, new feautures in commands
+
+## 🚧 | Requirements
 
 - [Node.js 14+](https://nodejs.org/en/download/)
 - Discord.js@12.5.3
-- [Сервер Lavalink](https://github.com/freyacodes/Lavalink#server-configuration)
+- [Lavalink Server](https://github.com/freyacodes/Lavalink#server-configuration)
 
 > Примечание: Lavalink необходим для работы с музыкой. У вас должен быть рабочий сервер Lavalink, чтобы бот работал.
 
-## ❄️ Возможности бота
+## **♡** | Miffie's Futures
 
-<div align="left"><img src="https://media.discordapp.net/attachments/921513281225633822/921639484636942356/Screenshot_2021-12-17_10.45.42_PM.png?width=401&height=451"></div>
+`Bassboost`: Basboost effect
+
+`Bump`: Move now-playing song at the top
+
+`Clear`: Clear queue
+
+`Config`: Set up a prefix and DJ role for your server
+
+`Disconnect`: Disconnect Miffie from Voice Channel
+
+`Grab`: Move the track at the specific place
+
+`Help`: The main command. Includes info about other commands
+
+`Invite`: Get Miffie's invite link
+
+`Loop`: Loop a track 
+
+`LoopQueue`: Loop a queue
+
+`Lyrics`: See lyrics of now-playing track
+
+`Move`: Move now-playing track above or below
+
+`nowplaying`: See what's on now
+
+`pause`: Pause a track
+
+`play`: Start playing a track (provide a song)
+
+... And a lot of different commands ...
+
+## **♡** | Installation
+
+1. `$ git clone https://github.com/Delicacy-Sound/miffie.git`
+
+2. `$ cd miffie`
+
+3. `$ bash replit.sh (If you are hosting on Replit) | npm i`
+
+4. `$ npm start`
 
 
-## ✨ Разработчики
 
-Помощники всегда приветствуются, так что обязательно ознакомьтесь с [Contributing.md](/CONTRIBUTING.md) :)
+## ✨ | Config
 
-Этот бот спонсируется и программируется команией [Delicacy Studios Inc.](https://vk.com/delicacystudios) . Бот защищен **MIT** лицензией, в связи с чем мы имеем полное право обращаться в суд если бот был скопирован и все отсылки на оригинальную версию  были удалены!
+```javascript
+module.exports = {
+  Admins: ["528930032823959562"],
+  ExpressServer: true,
+  DefaultPrefix: process.env.Prefix || "", // your prefix
+  Port: 3000,
+  SupportServer: "https://discord.gg/pMahg5Aama", 
+  Token: process.env["TOKEN"], // change it if you are self-hosting it
+  ClientID: process.env.Discord_ClientID || "874396158741594113",
+  ClientSecret: process.env.ClientSecret || "", // Your bot's secret
+  Scopes: ["identify", "guilds", "applications.commands"],
+  ServerDeafen: true,
+  DefaultVolume: 100,
+  CallbackURL: "/api/callback",
+  "24/7": false, // if you need radio
+  CookieSecret: "", // put whatever you want
+  IconURL: "",
+  EmbedColor: "#303237", //do not change it if you want your bot to be better
+  Permissions: 8,
+  Website: process.env.Website || "https://miffie.natedev.tk", //your website
 
+  locale: "en", // still in developing
 
-Если вы хотите использовать нашего бота в собственных целях, вы должны осведомить нас прежде чем переделывать его под себя и убирать все что было указано до этого
+  Lavalink: {
+    id: "Main",
+    host: "lava.link",
+    port: 80,              // dont touch these fields
+    pass: "youshallnotpass",
+    secure: false,
+  },
 
-> **Заметка:** Взносы не принимаются в основной ветке. Если вы хотите внести свой вклад, напишите нам на почту лично!
+  Spotify: {
+    ClientID: process.env["$Spotify_ClientID"],
+    ClientSecret: process.env["$ClientSercretSP"], // put your values
+  }
+};
+```
 
-Сделано с :heart: и Node JS!
+Made with :heart: and Node JS!
 
 ## Copyrights and License
 

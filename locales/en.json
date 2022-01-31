@@ -1,0 +1,33 @@
+{
+	"bassboost": {
+		"description": "Enables bassboost sound effect",
+		"error1": "❌ | **Nothing is playing right now...**",
+		"error2": "❌ | **You must be in a voice channel to use this command!**",
+		"error3": "❌ | **You must be on the same voice channel as the bot to use this command!**",
+		"error4": "**Please, enter a level Bassboost. \nAvailable levels:** `none`, `low`, `medium`, `high`",
+		"success": "✅ | **Level ** ${level} has been set up"
+	},
+	"bump": {
+		"description": "Moves the song to the front of the queue",
+		"error1": "❌ | **Nothing is playing right now...**",
+		"error2": "❌ | **Invalid Arguments**",
+		"error3": "❌ | **Wrong song number**"
+	},
+	"clear": {
+		"description": "Clears queue"
+	},
+	
+  "covid": {
+    "desc": "See the lastest news about covid cases in the world",
+    "world": "🌐 | Global cases",
+    "country": "${countrycovid} cases",
+    "description": "Number of cases may differ from other sources!",
+    "field1": "Cases",
+    "field2": "Active",
+    "field3": "Сases today",
+    "field4": "Critical cases",
+    "field5": "Deaths",
+    "field6": "Recovered",
+    "footer": "Natedev | Miffie"
+  }
+}

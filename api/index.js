@@ -14,18 +14,14 @@ fs.readdir(RoutesPath, (err, files) => {
 
 api.use("/", static(join(__dirname, "..", "assets")));
 
-//Handle Login and other stuff
-
 const session = require("express-session");
 const DiscordStrategy = require("passport-discord").Strategy;
 const passport = require("passport");
 
 let config;
 try {
-  //Config for testing
   config = require("../dev-config");
 } catch {
-  //Config for production
   config = require("../botconfig");
 }
 
@@ -38,7 +34,6 @@ passport.use(
       scope: "identify guilds",
     },
     function (accessToken, refreshToken, profile, done) {
-      //User logged in yay!
       process.nextTick(function () {
         return done(null, profile);
       });

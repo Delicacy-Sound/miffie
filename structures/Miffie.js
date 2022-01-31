@@ -10,7 +10,14 @@ const Express = require("express");
 const Logger = require("./Logger");
 const prettyMilliseconds = require("pretty-ms");
 
-// const { Linguini, Utils } = require('linguini');
+// -------------- //
+const { I18n } = require('i18n')
+
+const i18n = new I18n({
+  locales: ['ru', 'en'],
+  directory: path.join(__dirname, '..', 'locales')
+})
+// -------------- //
 
 require("discordjs-activity");
 require("./EpicPlayer");
@@ -28,20 +35,22 @@ class Miffie extends Client {
     this.database = {
       guild: new Jsoning("guild.json"),
     };
-    this.logger = new Logger(path.join(__dirname, "..", "Logs.log"));
 
+    this.logger = new Logger(path.join(__dirname, "..", "Logs.log"));
     try {
       this.botconfig = require("../dev-config");
     } catch {
       this.botconfig = require("../botconfig");
     }
+
     if (this.botconfig.Token === "")
       return new TypeError(
         "The botconfig.js is not filled out. Please make sure nothing is blank, otherwise the bot will not work properly."
       );
 
     this.LoadCommands();
-    this.LoadEvents();
+    this.LoadTestingCommands();
+    this.LoadEvents(); 
 
 
     this.server = Express();
@@ -67,7 +76,6 @@ class Miffie extends Client {
 
     this.ws.on("INTERACTION_CREATE", async (interaction) => {
       let GuildDB = await this.GetGuild(interaction.guild_id);
-
       if (!GuildDB) {
         await this.database.guild.set(interaction.guild_id, {
           prefix: this.botconfig.DefaultPrefix,
@@ -124,10 +132,6 @@ class Miffie extends Client {
       ]
     );
    
-
-
-
-
     this.Manager = new Manager({
       nodes: [
         {
@@ -146,11 +150,13 @@ class Miffie extends Client {
       .on("nodeConnect", (node) =>
         this.log(`Lavalink: Node ${node.options.identifier} connected`)
       )
+
       .on("nodeError", (node, error) =>
         this.log(
           `Lavalink: Node ${node.options.identifier} had an error: ${error.message}`
         )
       )
+
       .on("trackStart", async (player, track) => {
         this.SongsPlayed++;
         let TrackStartedEmbed = new MessageEmbed()
@@ -172,6 +178,7 @@ class Miffie extends Client {
           .send(TrackStartedEmbed);
         player.setNowplayingMessage(NowPlaying);
       })
+      
       .on("queueEnd", (player) => {
         let QueueEmbed = new MessageEmbed()
           .setAuthor("The queue has ended", this.botconfig.IconURL)
@@ -197,6 +204,25 @@ class Miffie extends Client {
             );
           this.commands.set(file.split(".")[0].toLowerCase(), cmd);
           this.log("Command Loaded: " + file.split(".")[0]);
+        });
+    });
+  }
+
+  LoadTestingCommands() {
+    let TestCommandsDir = path.join(__dirname, "..", "testing");
+    fs.readdir(TestCommandsDir, (err, files) => {
+      if (err) this.log(err);
+      else
+        files.forEach((file) => {
+          let cmd = require(TestCommandsDir + "/" + file);
+          if (!cmd.name || !cmd.description || !cmd.run)
+            return this.log(
+              "Unable to load Command: " +
+                file.split(".")[0] +
+                ", Reason: File doesn't had run/name/desciption"
+            );
+          this.commands.set(file.split(".")[0].toLowerCase(), cmd);
+          this.log("Testing Command Loaded: " + file.split(".")[0]);
         });
     });
   }

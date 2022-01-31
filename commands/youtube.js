@@ -1,5 +1,5 @@
 const { MessageEmbed } = require("discord.js");
-// const { Linguini, Utils } = require('linguini');
+const config = require('../botconfig.js')
 
 module.exports = {
   name: "youtube",
@@ -35,7 +35,7 @@ module.exports = {
         "YouTube Together",
         "https://cdn.discordapp.com/emojis/749289646097432667.png?v=1"
       )
-      .setColor("#FF0000").setDescription(`
+      .setColor(config.EmbedColor).setDescription(`
 Using **YouTube Together** you can watch YouTube with your friends in a Voice Channel. Click *Join YouTube Together* to join in!
 
 __**[Join YouTube Together](https://discord.com/invite/${Invite.code})**__
@@ -74,7 +74,7 @@ __**[Join YouTube Together](https://discord.com/invite/${Invite.code})**__
           "YouTube Together",
           "https://cdn.discordapp.com/emojis/749289646097432667.png?v=1"
         )
-        .setColor("#FF0000").setDescription(`
+        .setColor(config.EmbedColor).setDescription(`
 Using **YouTube Together** you can watch YouTube with your friends in a Voice Channel. Click *Join YouTube Together* to join in!
 
 __**[Join YouTube Together](https://discord.com/invite/${Invite.code})**__

@@ -1,6 +1,5 @@
 const { MessageEmbed } = require("discord.js");
 const { TrackUtils } = require("erela.js");
-// const { Linguini, Utils } = require('linguini');
 
 module.exports = {
   name: "seek",
@@ -44,33 +43,33 @@ module.exports = {
         `**Use: **\`${GuildDB.prefix}seek <number s/m/h>\` \n**Example - **\`${GuildDB.prefix}seek 2m 10s\``
       );
     player.seek(SeekTo * 1000);
-    message.react("❄");
+    message.react("♡");
   },
 
-    SlashCommand: {
-        options: [
-            {
-                name: "position",
-                description: "Enter a timestamp you want to seek to. Example - 2m 10s",
-                value: "position",
-                type: 3,
-                required: true,
+  SlashCommand: {
+    options: [
+      {
+        name: "position",
+        description: "Enter a timestamp you want to seek to. Example - 2m 10s",
+        value: "position",
+        type: 3,
+        required: true,
+      }
+    ],
 
-                run: async (client, interaction, args, { GuildDB }) => {
-                    const guild = client.guilds.cache.get(interaction.guild_id);
-                    const member = guild.members.cache.get(interaction.member.user.id);
-                    let player = await client.Manager.get(interaction.guild_id);
+    run: async (client, interaction, args, { GuildDB }) => {
+      const guild = client.guilds.cache.get(interaction.guild_id);
+      const member = guild.members.cache.get(interaction.member.user.id);
+      let player = await client.Manager.get(interaction.guild_id);
                     
-                    if (!member.voice.channel) return client.sendTime(interaction, "❌ | **You must be in a voice channel to use this command.**");
-                    if (guild.me.voice.channel && !guild.me.voice.channel.equals(member.voice.channel)) return client.sendTime(interaction, ":x: | **You must be in the same voice channel as me to use this command!**");
-                    if (!player) return client.sendTime(interaction, "❌ | **Nothing is playing right now...**");
-                    if (!player.queue.current.isSeekable) return client.sendTime(interaction, "❌ | **I'm not able to seek this song!**");
-                    let SeekTo = client.ParseHumanTime(interaction.data.options[0].value);
-                    if (!SeekTo) return client.sendTime(interaction, `**Usage - **\`${GuildDB.prefix}seek <number s/m/h>\` \n**Example -** \`${GuildDB.prefix}seek 2m 10s\``);
-                    player.seek(SeekTo * 1000);
-                    client.sendTime(interaction, "❄ | **Successfully moved the song to **", `\`${Seekto}\``);
-                },
-            },
-        ],
-    },
-};
+      if (!member.voice.channel) return client.sendTime(interaction, "❌ | **You must be in a voice channel to use this command.**");
+      if (guild.me.voice.channel && !guild.me.voice.channel.equals(member.voice.channel)) return client.sendTime(interaction, ":x: | **You must be in the same voice channel as me to use this command!**");
+      if (!player) return client.sendTime(interaction, "❌ | **Nothing is playing right now...**");
+      if (!player.queue.current.isSeekable) return client.sendTime(interaction, "❌ | **I'm not able to seek this song!**");
+      let SeekTo = client.ParseHumanTime(interaction.data.options[0].value);
+      if (!SeekTo) return client.sendTime(interaction, `**Usage - **\`${GuildDB.prefix}seek <number s/m/h>\` \n**Example -** \`${GuildDB.prefix}seek 2m 10s\``);
+        player.seek(SeekTo * 1000);
+        client.sendTime(interaction, "♡ | **Successfully moved the song to **", `\`${Seekto}\``);
+      }
+    }
+}

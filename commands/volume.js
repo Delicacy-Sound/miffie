@@ -35,7 +35,7 @@ module.exports = {
     )
       return client.sendTime(
         message.channel,
-        ":x: | **You must be in the same voice channel as me to use this command!**"
+        "❌ | **You must be in the same voice channel as me to use this command!**"
       );
     if (!parseInt(args[0]))
       return client.sendTime(

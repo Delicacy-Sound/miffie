@@ -7,7 +7,6 @@ module.exports = async (client, message) => {
   let GuildDB = await client.GetGuild(message.guild.id);
   if (GuildDB && GuildDB.prefix) prefix = GuildDB.prefix;
 
-  //Initialize GuildDB
   if (!GuildDB) {
     await client.database.guild.set(message.guild.id, {
       prefix: prefix,
@@ -16,7 +15,6 @@ module.exports = async (client, message) => {
     GuildDB = await client.GetGuild(message.guild.id);
   }
 
-  //Prefixes also have mention match
   const prefixMention = new RegExp(`^<@!?${client.user.id}> `);
   prefix = message.content.match(prefixMention)
     ? message.content.match(prefixMention)[0]
@@ -25,15 +23,11 @@ module.exports = async (client, message) => {
   if (message.content.indexOf(prefix) !== 0) return;
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  //Making the command lowerCase because our file name will be in lowerCase
   const command = args.shift().toLowerCase();
 
-  //Searching a command
   const cmd =
     client.commands.get(command) ||
     client.commands.find((x) => x.aliases && x.aliases.includes(command));
-
-  //Executing the codes when we get the command or aliases
 
   if (cmd) {
     if (

@@ -17,9 +17,9 @@ module.exports = {
         "Invite " + client.user.tag + " to your server!",
         client.user.displayAvatarURL()
       )
-      .setColor("RANDOM")
+      .setColor(client.botconfig.EmbedColor)
       .setDescription(
-        `You can invite me by clicking [❄ here ❄](https://discord.com/oauth2/authorize?client_id=${
+        `You can invite Miffie by clicking [♡ here ♡](https://discord.com/oauth2/authorize?client_id=${
           client.botconfig.ClientID
         }&permissions=${
           client.botconfig.Permissions
@@ -37,9 +37,9 @@ module.exports = {
           "Invite " + client.user.tag + " to your server!",
           client.user.displayAvatarURL()
         )
-        .setColor("RANDOM")
+        .setColor(client.botconfig.EmbedColor)
         .setDescription(
-          `You can invite me by clicking [❄ here ❄](https://discord.com/oauth2/authorize?client_id=${
+          `You can invite me by clicking [♡ here ♡](https://discord.com/oauth2/authorize?client_id=${
             client.botconfig.ClientID
           }&permissions=${
             client.botconfig.Permissions

@@ -1,12 +1,11 @@
 const api = require("express").Router();
 const { Collection } = require("discord.js");
 const { join } = require("path");
+
 let config;
 try {
-  //Config for testing
   config = require("../dev-config");
 } catch {
-  //Config for production
   config = require("../botconfig");
 }
 const Auth = require("./Middlewares/Auth");

@@ -1,6 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const { TrackUtils } = require("erela.js");
-// const { Linguini, Utils } = require('linguini');
+const i18n = require("../util/i18n.js");
+
 
 const levels = {
   none: 0.0,
@@ -8,9 +9,10 @@ const levels = {
   medium: 0.3,
   high: 0.35,
 };
+
 module.exports = {
   name: "bassboost",
-  description: "Enables bass boosting audio effect",
+  description: i18n.__("bassboost.description"),
   usage: "<none|low|medium|high>",
   permissions: {
     channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
@@ -23,7 +25,7 @@ module.exports = {
     if (!player)
       return client.sendTime(
         message.channel,
-        "❌ | **Nothing is playing right now...**"
+        i18n.__mf("bassboost.error1")
       );
     if (!message.member.voice.channel)
       return client.sendTime(
@@ -60,6 +62,7 @@ module.exports = {
       `✅ | **Bassboost level set to** \`${level}\``
     );
   },
+  
   SlashCommand: {
     options: [
       {

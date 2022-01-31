@@ -22,10 +22,10 @@ module.exports = {
 
     let song = player.queue.current;
     let QueueEmbed = new MessageEmbed()
-      .setAuthor("❄ Currently playing ❄", client.botconfig.IconURL)
+      .setAuthor("♡ Currently playing ♡", client.botconfig.IconURL)
       .setColor(client.botconfig.EmbedColor)
       .setDescription(`[${song.title}](${song.uri})`)
-      .addField("Requested by", `${song.requester}`, true)
+      .addField("Requested by", `${song.requester}`, false)
       .addField(
         "Duration",
         `${
@@ -37,12 +37,12 @@ module.exports = {
           colonNotation: true,
         })}\``
       )
-      .setThumbnail(player.queue.current.displayThumbnail());
+      .setImage(player.queue.current.displayThumbnail());
+      .setFooter('NateDev | Miffie')
     return message.channel.send(QueueEmbed);
   },
 
   SlashCommand: {
-
     run: async (client, interaction, args, { GuildDB }) => {
       let player = await client.Manager.get(interaction.guild_id);
       if (!player.queue.current)
@@ -53,7 +53,7 @@ module.exports = {
 
       let song = player.queue.current;
       let QueueEmbed = new MessageEmbed()
-        .setAuthor("❄ Currently playing ❄", client.botconfig.IconURL)
+        .setAuthor("♡ Currently playing ♡", client.botconfig.IconURL)
         .setColor(client.botconfig.EmbedColor)
         .setDescription(`[${song.title}](${song.uri})`)
         .addField("Requested by", `${song.requester}`, true)
@@ -71,7 +71,8 @@ module.exports = {
             colonNotation: true,
           })}\``
         )
-        .setThumbnail(player.queue.current.displayThumbnail());
+        .setImage(player.queue.current.displayThumbnail());
+        .setFooter('NateDev | Miffie')
       return interaction.send(QueueEmbed);
     },
   },

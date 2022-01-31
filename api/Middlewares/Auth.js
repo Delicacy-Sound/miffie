@@ -1,9 +1,7 @@
 let config;
 try {
-  //Config for testing
-  config = require("../../dev-config");
+  devconfig = require("../../dev-config");
 } catch {
-  //Config for production
   config = require("../../botconfig");
 }
 

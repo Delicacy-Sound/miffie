@@ -36,7 +36,7 @@ module.exports = {
     )
       return client.sendTime(
         message.channel,
-        ":x: | **You must be in the same voice channel as me to use this command!**"
+        "❌ | **You must be in the same voice channel as me to use this command!**"
       );
 
     try {
@@ -58,7 +58,7 @@ module.exports = {
       //Send Success Message
       return client.sendTime(
         message.channel,
-        `❄ Skipped \`${Number(args[0] - 1)}\` songs`
+        `♡ Skipped \`${Number(args[0] - 1)}\` songs`
       );
     } catch (e) {
       console.log(String(e.stack).bgRed);
@@ -76,6 +76,7 @@ module.exports = {
         description: "Skips to a specific song in the queue",
       },
     ],
+    
     run: async (client, interaction, args, { GuildDB }) => {
       const guild = client.guilds.cache.get(interaction.guild_id);
       const member = guild.members.cache.get(interaction.member.user.id);
@@ -130,7 +131,7 @@ module.exports = {
         //Send Success Message
         return client.sendTime(
           interaction,
-          `❄ Skipped \`${Number(skipTo)}\` songs`
+          `♡ Skipped \`${Number(skipTo)}\` songs`
         );
       } catch (e) {
         console.log(String(e.stack).bgRed);
