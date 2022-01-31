@@ -1,4 +1,4 @@
-<h1 align="center"><img src="./assets/logo.jpg" width="250px"></h1>
+
 
 <img width="170" height="170" align="left" style="float: left; margin: 0 10px 0 0; border-radius: 50%;" alt="Miffie's logo" src="./assets/logo.jpg">  
 
